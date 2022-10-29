@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-3 text-center">Django App</h1>
+        <p class="my-2">
+            Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+        </p>
+        <ul>
+            <li class="list-group-item">
+                Django was designed to help developers take applications from concept to completion as quickly as possible.
+            </li>
+            <li class="list-group-item">
+                Django takes security seriously and helps developers avoid many common security mistakes.
+            </li>
+            <li class="list-group-item">
+                Some of the busiest sites on the web leverage Django’s ability to quickly and flexibly scale.
+            </li>
+        </ul>
+        <img
+            src="{% static 'example.jpg' %}"
+            alt="cool image"
+            title="cool image"
+            width="800px"
+            class="mx-auto d-block img-fluid"
+        />
+        <div class="text-center mt-3">
+            <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+            <a class="btn btn-primary" href="{% url 'signup' %}">Signup</a>
+        </div>
+    </section>
+</main>
+{% endblock %}
